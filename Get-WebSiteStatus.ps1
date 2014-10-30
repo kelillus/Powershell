@@ -12,7 +12,7 @@ $HostHeaders=@('apandu.com','www.upanddo.com')
         Else {
             $Message="Site $HostHeader in server $WebServer may be down, please check!"
             Write-Host $Message
-        Send-MailMessage -To 'miquel.camps@iberoservice.com' -From 'alertas@iberoservice.com' -Subject $Message -SmtpServer intramail.ibs.loc
+        Send-MailMessage -To 'to@contoso.com' -From 'from@contoso.com' -Subject $Message -SmtpServer intramail.ibs.loc
         }
     }
 }
