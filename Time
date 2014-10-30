@@ -1,0 +1,11 @@
+Get-WmiObject -Class Win32_LocalTime -ComputerName PCPMI044 | Select-Object -Property [a-z]*
+Get-WmiObject -Class Win32_LocalTime -ComputerName PCPMI044 | Select-Object -Property Hour,Minute,Second | FT -AutoSize
+get-service -ComputerName PCPMI044 -Name W32Time | Stop-Service 
+get-service -ComputerName PCPMI044 -Name W32Time | Start-Service
+w32tm /monitor /computers:PCPMI044
+w32tm /query /computer:PCPMI044 /Configuration
+w32tm /query /computer:PCPMI050 /Status
+w32tm /stripchart /computer:PCPMI044 
+w32tm /monitor
+w32tm /resync /computer:PCPMI044 /nowait /rediscover
+ame] [/nowait]|[/rediscover}]
