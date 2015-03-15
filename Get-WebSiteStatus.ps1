@@ -1,4 +1,5 @@
-﻿$WebServers=@('SVPMI151','SVPMI152')
+﻿#Get-WebSiteStatus
+$WebServers=@('SVPMI151','SVPMI152')
 $HostHeaders=@('apandu.com','www.upanddo.com')
  foreach ($WebServer in $WebServers) {
     foreach ($HostHeader in $HostHeaders) {
